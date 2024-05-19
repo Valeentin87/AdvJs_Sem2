@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Honework 5</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <p class="dropdown">Привет :)</p>
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Dropdown button
+      </button>
+      <div class="menu dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+    //   1. Ко всем элементам, имеющим класс "dropdown-item" добавить еще один класс "super-dropdown", 
+    //   необходимо использовать методы forEach и querySelectorAll и свойство classList у элементов.
+    const dropdown_item = document.querySelectorAll('.dropdown-item')
+    dropdown_item.forEach(element => {
+        console.log(element);
+        element.classList.add('super-dropdown');
+    });
+    console.log(dropdown_item);
+    </script>
+  </body>
 </html>
