@@ -48,6 +48,14 @@
     div_dropdown.insertAdjacentHTML('afterend', '<a href="#">link</a>');
     // 5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
     document.querySelector('#dropdownMenuButton').setAttribute('id', 'superDropdown');
+    // 6. Добавьте атрибут data-dd со значением 3 элементу у которого существует атрибут "aria-labelledby" 
+    // равный "dropdownMenuButton" используя dataset.
+    const aria_label = document.querySelectorAll('[aria-labelledby="dropdownMenuButton"]');
+    console.log(aria_label);
+    aria_label.forEach(element => {
+        element.dataset.dd = 3;
+        
+    });
     </script>
   </body>
 </html>
