@@ -42,8 +42,10 @@
     // 3. Необходимо удалить класс "dropdown-menu" у элемента, у которого присутствует класс "menu".
     const ex3 = document.querySelector('.menu').classList.remove("dropdown-menu")
     console.log(ex3);
-    
-
+//     4. Используя метод insertAdjacentHTML добавьте после div'a с классом "dropdown" следующую разметку:
+// `<a href="#">link</a>`
+    const div_dropdown = document.querySelector('.dropdown');
+    div_dropdown.insertAdjacentHTML('afterend', '<a href="#">link</a>');
     
     </script>
   </body>
